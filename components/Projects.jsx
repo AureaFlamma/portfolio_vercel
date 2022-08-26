@@ -1,9 +1,21 @@
-import { Flex, Spacer } from "@chakra-ui/react";
+import { Flex, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
+import ProjectsCard from "./ProjectsCard";
+import ProjectsData from "../libs/ProjectsData";
 
 function Projects() {
-  return <Flex bg="green">fsdfdsngsn</Flex>;
+  return (
+    <Flex direction="column">
+      <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
+        My projects
+      </Text>
+      <Flex mt="4em" bg="green">
+        {ProjectsData.map((project, i) => (
+          <ProjectsCard project={project} key={i} />
+        ))}
+      </Flex>
+    </Flex>
+  );
 }
 
 export default Projects;
-// m="clamp(50px, 5vh, 5vh)" my="clamp(25px, 2.5vh, 2.5vh)"
