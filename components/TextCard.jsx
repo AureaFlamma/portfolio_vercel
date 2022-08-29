@@ -3,7 +3,7 @@ import React from "react";
 
 function TextCard({ title, subtitle, paragraph }) {
   return (
-    <Flex h="90vh" direction="column" bg="blackAlpha.100">
+    <Flex h="90vh" direction="column" >
       <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
         {title}
       </Text>
