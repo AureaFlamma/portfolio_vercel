@@ -4,7 +4,7 @@ import Projects from "../components/Projects";
 import { Flex, Spacer } from "@chakra-ui/react";
 import Lorem from "../libs/Lorem";
 import SocialsNav from "../components/SocialsNav";
-
+import SocialsNav1 from "../components/SocialsNav1";
 export default function Index() {
   return (
     <div>
