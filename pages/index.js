@@ -3,6 +3,7 @@ import TextCard from "../components/TextCard";
 import Projects from "../components/Projects";
 import { Flex, Spacer } from "@chakra-ui/react";
 import Lorem from "../libs/Lorem";
+import SocialsNav from "../components/SocialsNav";
 
 export default function Index() {
   return (
@@ -24,6 +25,7 @@ export default function Index() {
         <Projects />
         <Spacer my="2.5vh" />
         <TextCard title={`About`} paragraph={Lorem.about} />
+        <SocialsNav/>
       </Flex>
     </div>
   );
