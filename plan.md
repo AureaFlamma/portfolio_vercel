@@ -1,3 +1,4 @@
-1. Margin/padding between title and paragraph/gallery- make consistent
+1. Margin/padding between title and paragraph/gallery- make consistent. Also, sizing of floating menus
 2. Resize: especially Project to make more fit on one page
-3. DRY the Projects Card
+3. DRY the Projects Card DONE
+4. Optimise the nav menu icons to use library
