@@ -4,6 +4,7 @@ import Projects from "../components/Projects";
 import { Flex, Spacer } from "@chakra-ui/react";
 import Lorem from "../libs/Lorem";
 import SocialsNav2 from "../components/SocialsNav2";
+import PageNav from "../components/PageNav";
 export default function Index() {
   return (
     <div>
@@ -15,15 +16,17 @@ export default function Index() {
         backgroundAttachment={"fixed"}
         color="white"
       >
+        <PageNav />
         <TextCard
           title={Lorem.name}
           subtitle={Lorem.role}
           paragraph={Lorem.personal_profile}
+          id="home"
         />
         <Spacer my="2.5vh" />
         <Projects />
         <Spacer my="2.5vh" />
-        <TextCard title={`About`} paragraph={Lorem.about} />
+        <TextCard title={`About`} paragraph={Lorem.about} id="about" />
         <SocialsNav2 />
       </Flex>
     </div>

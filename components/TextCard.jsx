@@ -1,9 +1,9 @@
 import { Flex, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
 
-function TextCard({ title, subtitle, paragraph }) {
+function TextCard({ title, subtitle, paragraph, id }) {
   return (
-    <Flex h="90vh" direction="column" >
+    <Flex h="90vh" direction="column" id={id}>
       <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
         {title}
       </Text>

@@ -5,7 +5,7 @@ import ProjectsData from "../libs/ProjectsData";
 
 function Projects() {
   return (
-    <Flex direction="column">
+    <Flex direction="column" id="projects">
       <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
         My projects
       </Text>
