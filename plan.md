@@ -3,3 +3,4 @@
 3. DRY the Projects Card DONE
 4. Optimise the nav menu icons to use library
 5. Test whether mailto: works
+6. Replace images with vids/gifs
