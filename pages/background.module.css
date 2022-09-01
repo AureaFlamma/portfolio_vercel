@@ -1,6 +1,6 @@
 .gradient {
-  background: linear-gradient(130deg,#000814,#0b165e,#ff0e56,#ffe70e);
-  background-size: 180% 180%;
+  background: linear-gradient(130deg,#000d1f,#0b165e,#ff0e56,#ffe70e, #ffe600);
+  background-size: 220% 220%;
   background-attachment: fixed;
   animation: gradient-animation 12s ease infinite;
 }
