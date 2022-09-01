@@ -11,12 +11,12 @@ export default function Index() {
     <Flex
       className={styles.gradient}
       direction="column"
-      py="110px"
-      px="110px"
+      py={{ base: "40px", lg: "110px" }}
+      px={{ base: "20px", lg: "110px" }}
       color="white"
       gap="110px"
     >
-      <PageNav />
+      {/* <PageNav /> */}
       <TextCard
         title={Lorem.name}
         subtitle={Lorem.role}
@@ -27,7 +27,7 @@ export default function Index() {
       <Projects id="projects" />
 
       <TextCard subtitle={`About`} paragraph={Lorem.about} id="about" />
-      <SocialsNav />
+      {/* <SocialsNav /> */}
     </Flex>
   );
 }

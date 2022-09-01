@@ -6,10 +6,14 @@ import ProjectsData from "../libs/ProjectsData";
 function Projects({ id }) {
   return (
     <Flex direction="column" id={id}>
-      <Text fontSize="120" fontWeight="600" lineHeight={"1"}>
+      <Text
+        fontSize={{ base: "40", lg: "120" }}
+        fontWeight="600"
+        lineHeight={"1"}
+      >
         My projects
       </Text>
-      <Flex mt="80px" direction="column" gap="80px">
+      <Flex mt={{ base: "30px", lg: "80px" }} direction="column" gap="80px">
         {ProjectsData.map((project, i) => (
           <ProjectsCard project={project} key={i} index={i} />
         ))}

@@ -6,19 +6,31 @@ import React from "react";
 function TextCard({ title, subtitle, paragraph, id }) {
   return (
     <Flex
-      h="calc(100vh - 110px)"
+      h={{ base: "100vh", lg: "calc(100vh - 110px)" }}
       direction="column"
       id={id}
-      width="55%"
-      minWidth={"900px"}
+      width={{ base: "full", lg: "55%" }}
+      minWidth={{ base: 0, lg: "900px" }}
     >
-      <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
+      <Text
+        fontSize={{ base: "40", lg: "120" }}
+        fontWeight="700"
+        lineHeight={"1"}
+      >
         {title}
       </Text>
-      <Text fontSize="120" fontWeight="600" lineHeight={"1"}>
+      <Text
+        fontSize={{ base: "40", lg: "120" }}
+        fontWeight="600"
+        lineHeight={"1"}
+      >
         {subtitle}
       </Text>
-      <Text fontSize="24" mt="80px" textAlign={"justify"}>
+      <Text
+        fontSize={{ base: "18", lg: "24" }}
+        mt={{ base: "30px", lg: "80px" }}
+        textAlign={"justify"}
+      >
         {paragraph}
       </Text>
     </Flex>
