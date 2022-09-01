@@ -1,9 +1,11 @@
 import { Flex, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
 
+//Height of Text Card set to height of viewport - height of margin
+
 function TextCard({ title, subtitle, paragraph, id }) {
   return (
-    <Flex h="90vh" direction="column" id={id} bg="red">
+    <Flex h="calc(100vh - 80px)" direction="column" id={id} bg="red">
       <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
         {title}
       </Text>

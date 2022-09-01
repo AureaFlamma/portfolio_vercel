@@ -10,73 +10,51 @@ import {
 } from "@chakra-ui/react";
 import { Link as LinkScroll } from "react-scroll";
 
+//As with Socials Nav, width (in the code - height, because of the rotation) of NavButton and PageNav is 50px. Width of padding is 80px.
+//This means that left-offsetting PageNav by 15px ((80px-50px)/2) will justify it horizontally
+
+const NavButton = ({ to }) => {
+  return (
+    <LinkScroll to={to} spy={true} smooth={true} offset={-80} duration={500}>
+      <Button
+        transform="rotate(270deg)"
+        h="50px"
+        bg="null"
+        _hover={{ color: "#FFBC1D" }}
+        _focus={{ color: "#FFBC1D" }}
+        _active={{}} //This is only to override the default chakra _active styling for buttons
+        color="whiteAlpha.800"
+        cursor="pointer"
+      >
+        <Text fontSize={"2xl"} textTransform="capitalize">
+          {to}
+        </Text>
+      </Button>
+    </LinkScroll>
+  );
+};
+
 const PageNav = () => {
-  const navigationData = [{ name: "About", link: "#About" }];
   return (
     <Flex
       direction="column"
       position="fixed"
-      top="10px"
-      left="10px"
+      top="calc(50vh - 150px)" //just offsetting it by 50vh would put the *top edge* of the Flex 50vh below top edge of viewport. subtracting half of the height of the flexbox (i.e. half of 300px) will put its *centre* in the middle of the screen
+      left="15px"
       align="center"
-      w="40px"
+      w="50px"
+      h="300px"
+      lineHeight={"3em"} //This is needed so that the dividers stay more or less in the middle of the letters. Without it they start at the top of the letter.
     >
-      <LinkScroll to="home" spy={true} smooth={true} offset={50} duration={500}>
-        <Flex
-          transform="rotate(270deg)"
-          h="40px"
-          bg="null"
-          my="40px"
-          px="40px"
-          _hover={{ color: "#FFBC1D" }}
-          color="whiteAlpha.800"
-          cursor="pointer"
-        >
-          <Text fontSize={"2xl"}>Home</Text>
-        </Flex>
-      </LinkScroll>
-      <Divider border="2px" />
-      <LinkScroll
-        to="projects"
-        spy={true}
-        smooth={true}
-        offset={50}
-        duration={500}
-      >
-        <Flex
-          transform="rotate(270deg)"
-          h="40px"
-          bg="null"
-          my="40px"
-          px="40px"
-          color="whiteAlpha.800"
-          _hover={{ color: "#FFBC1D" }}
-          cursor="pointer"
-        >
-          <Text fontSize={"2xl"}>Projects</Text>
-        </Flex>
-      </LinkScroll>
-      <Divider border="2px" />
-      <LinkScroll
-        to="about"
-        spy={true}
-        smooth={true}
-        offset={50}
-        duration={500}
-      >
-        <Flex
-          transform="rotate(270deg)"
-          h="40px"
-          bg="null"
-          my="40px"
-          px="40px"
-          color="whiteAlpha.800"
-          _hover={{ color: "#FFBC1D" }}
-          cursor="pointer"
-        >
-          <Text fontSize={"2xl"}>About</Text>
-        </Flex>
-      </LinkScroll>
+      <NavButton to="home" />
+      <Spacer />
+      <Divider border="1px" w="60%" />
+      <Spacer />
+      <NavButton to="projects" />
+      <Spacer />
+      <Divider border="1px" w="60%" />
+      <Spacer />
+      <NavButton to="about" />
     </Flex>
   );
 };
