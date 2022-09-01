@@ -11,7 +11,7 @@ export default function Index() {
       <Flex
         direction="column"
         bg="yellow"
-        p="clamp(50px, 5vh, 5vh)"
+        p="80px"
         bgGradient="linear(130deg, #0B315E 0%, #FF0E56 74.31%, #FFE70E 103.68%)"
         backgroundAttachment={"fixed"}
         color="white"
@@ -23,9 +23,9 @@ export default function Index() {
           paragraph={Lorem.personal_profile}
           id="home"
         />
-        <Spacer my="2.5vh" />
-        <Projects />
-        <Spacer my="2.5vh" />
+        <Spacer my="40px" />
+        <Projects id="projects" />
+        <Spacer my="40px" />
         <TextCard title={`About`} paragraph={Lorem.about} id="about" />
         <SocialsNav2 />
       </Flex>

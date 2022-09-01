@@ -3,9 +3,9 @@ import React from "react";
 import ProjectsCard from "./ProjectsCard";
 import ProjectsData from "../libs/ProjectsData";
 
-function Projects() {
+function Projects({ id }) {
   return (
-    <Flex direction="column" id="projects">
+    <Flex direction="column" id={id} bg="red">
       <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
         My projects
       </Text>
