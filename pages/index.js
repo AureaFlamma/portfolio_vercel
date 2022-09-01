@@ -11,11 +11,12 @@ export default function Index() {
       <Flex
         direction="column"
         bg="yellow"
-        py="80px"
+        py="110px"
         px="110px"
         bgGradient="linear(130deg, #0B315E 0%, #FF0E56 74.31%, #FFE70E 103.68%)"
         backgroundAttachment={"fixed"}
         color="white"
+        gap="110px"
       >
         <PageNav />
         <TextCard
@@ -24,10 +25,10 @@ export default function Index() {
           paragraph={Lorem.personal_profile}
           id="home"
         />
-        <Spacer my="40px" />
+        {/* <Spacer my="40px" /> */}
         <Projects id="projects" />
-        <Spacer my="40px" />
-        <TextCard title={`About`} paragraph={Lorem.about} id="about" />
+        {/* <Spacer my="40px" /> */}
+        <TextCard subtitle={`About`} paragraph={Lorem.about} id="about" />
         <SocialsNav />
       </Flex>
     </div>

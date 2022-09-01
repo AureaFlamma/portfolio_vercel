@@ -3,22 +3,24 @@ import { Flex, Spacer, Text, Image, Link } from "@chakra-ui/react";
 
 function Img({ project }) {
   return (
-    <Link href={project.link} isExternal>
-      <Image
-        src={project.img_src}
-        alt={project.alt}
-        width="45vw"
-        fit="cover"
-        fallbackSrc="https://via.placeholder.com/1920x1080.png"
-        _hover={{ boxShadow: "0 0 25px #FFBC1D" }}
-      />
-    </Link>
+    <Flex width="45%" bg="pink">
+      <Link href={project.link} isExternal>
+        <Image
+          src={project.img_src}
+          alt={project.alt}
+          width="full"
+          fit="cover"
+          fallbackSrc="https://via.placeholder.com/1920x1080.png"
+          _hover={{ boxShadow: "0 0 25px #FFBC1D" }}
+        />
+      </Link>
+    </Flex>
   );
 }
 
 function Description({ project, align }) {
   return (
-    <Flex direction="column" w="45vw">
+    <Flex direction="column" w="40%">
       <Text fontSize={"50"} align={align}>
         {project.name}
       </Text>
@@ -31,16 +33,15 @@ function Description({ project, align }) {
 
 function ProjectsCard({ index, project }) {
   return index % 2 ? (
-    <Flex w="full" my="5vh">
+    <Flex justifyContent={"flex-start"} gap="40px" w="full">
       <Img project={project} />
-      <Spacer />
+
       <Description project={project} align="left" />
     </Flex>
   ) : (
-    <Flex w="full" my="5vh">
+    <Flex justifyContent={"flex-end"} gap="40px" w="full">
       <Description project={project} align="right" />
-      <Spacer />
-      <Img project={project} />
+      <Img project={project} />{" "}
     </Flex>
   );
 }

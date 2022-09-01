@@ -24,7 +24,13 @@ const SocialIcon = ({ href, icon }) => {
 
 const SocialsNav3 = () => {
   return (
-    <Flex direction={"column"} position="fixed" top="80px" right="30px" gap="5">
+    <Flex
+      direction={"column"}
+      position="fixed"
+      top="110px"
+      right="30px"
+      gap="5"
+    >
       <SocialIcon href="https://github.com/AureaFlamma" icon={FaGithub} />
       <SocialIcon
         href="https://www.linkedin.com/in/kaminskp/"

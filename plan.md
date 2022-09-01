@@ -23,3 +23,4 @@ Bells and whistles:
 6. Make Social Nav styling independent of number of options.
 7. Reformat with CSS variables. (including getting Socal Nav width in a variable)
 8. Fix wrapping of titles
+9. Projects: github link + deploy link

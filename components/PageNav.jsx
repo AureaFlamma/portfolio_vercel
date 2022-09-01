@@ -12,7 +12,7 @@ import { Link as LinkScroll } from "react-scroll";
 
 const NavButton = ({ to }) => {
   return (
-    <LinkScroll to={to} spy={true} smooth={true} offset={-80} duration={500}>
+    <LinkScroll to={to} spy={true} smooth={true} offset={-111} duration={500}>
       <Button
         transform="rotate(270deg)"
         h="50px"
