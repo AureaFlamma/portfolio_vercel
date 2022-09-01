@@ -4,7 +4,7 @@ import { FaGithub, FaEnvelope } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 //The big Flex is offset-top by 80px, which is the height of the top padding of the page
-//The icons (and therefore the flex) have a width of 50px. The right padding of the page is 80px, so right-offseting the big Flex by 15px justifies it horizontally.
+//The icons (and therefore the flex) have a width of 50px. The right padding of the page is 120px, so right-offseting the big Flex by 30px justifies it horizontally.
 
 const SocialIcon = ({ href, icon }) => {
   return (
@@ -24,7 +24,7 @@ const SocialIcon = ({ href, icon }) => {
 
 const SocialsNav3 = () => {
   return (
-    <Flex direction={"column"} position="fixed" top="80px" right="15px" gap="5">
+    <Flex direction={"column"} position="fixed" top="80px" right="30px" gap="5">
       <SocialIcon href="https://github.com/AureaFlamma" icon={FaGithub} />
       <SocialIcon
         href="https://www.linkedin.com/in/kaminskp/"
