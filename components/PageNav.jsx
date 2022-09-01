@@ -10,9 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { Link as LinkScroll } from "react-scroll";
 
-//As with Socials Nav, width (in the code - height, because of the rotation) of NavButton and PageNav is 50px. Width of padding is 80px.
-//This means that left-offsetting PageNav by 15px ((80px-50px)/2) will justify it horizontally
-
 const NavButton = ({ to }) => {
   return (
     <LinkScroll to={to} spy={true} smooth={true} offset={-80} duration={500}>
@@ -40,7 +37,7 @@ const PageNav = () => {
       direction="column"
       position="fixed"
       top="calc(50vh - 150px)" //just offsetting it by 50vh would put the *top edge* of the Flex 50vh below top edge of viewport. subtracting half of the height of the flexbox (i.e. half of 300px) will put its *centre* in the middle of the screen
-      left="15px"
+      left="10px" //Unlike the Socisl Nav, which is justified center horizontally, this Page Nav isn't in the middle of the padding (it's a bit to the left) as to leave more whitespace between it and the text of Home/About
       align="center"
       w="50px"
       h="300px"

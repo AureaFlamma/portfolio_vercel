@@ -5,14 +5,14 @@ import React from "react";
 
 function TextCard({ title, subtitle, paragraph, id }) {
   return (
-    <Flex h="calc(100vh - 80px)" direction="column" id={id} bg="red">
+    <Flex h="calc(100vh - 80px)" direction="column" id={id} width="55%">
       <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
         {title}
       </Text>
       <Text fontSize="120" fontWeight="600" lineHeight={"1"}>
         {subtitle}
       </Text>
-      <Text fontSize="30" mt="4em" w="80%" textAlign={"justify"}>
+      <Text fontSize="24" mt="80px" textAlign={"justify"}>
         {paragraph}
       </Text>
     </Flex>

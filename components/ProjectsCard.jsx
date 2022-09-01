@@ -19,10 +19,10 @@ function Img({ project }) {
 function Description({ project, align }) {
   return (
     <Flex direction="column" w="45vw">
-      <Text mb="5" fontSize={"50"} align={align}>
+      <Text fontSize={"50"} align={align}>
         {project.name}
       </Text>
-      <Text fontSize={"30"} align={align}>
+      <Text fontSize={"24"} align={align} mt="10px">
         {project.description}
       </Text>
     </Flex>

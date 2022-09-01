@@ -11,7 +11,8 @@ export default function Index() {
       <Flex
         direction="column"
         bg="yellow"
-        p="80px"
+        py="80px"
+        px="110px"
         bgGradient="linear(130deg, #0B315E 0%, #FF0E56 74.31%, #FFE70E 103.68%)"
         backgroundAttachment={"fixed"}
         color="white"
