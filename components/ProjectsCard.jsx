@@ -1,5 +1,12 @@
 import React from "react";
-import { Flex, Spacer, Text, Image, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  Spacer,
+  Text,
+  Image,
+  Link,
+  scaleFadeConfig,
+} from "@chakra-ui/react";
 
 function Img({ project }) {
   return (
@@ -10,8 +17,13 @@ function Img({ project }) {
           alt={project.alt}
           width="full"
           fit="cover"
+          opacity={0.8}
           fallbackSrc="https://via.placeholder.com/1920x1080.png"
-          _hover={{ boxShadow: "0 0 50px 10px #FF9C2880" }}
+          _hover={{
+            transform: "scale(1.2)",
+            transition: "transform .2s",
+            opacity: "1",
+          }}
         />
       </Link>
     </Flex>
@@ -33,12 +45,12 @@ function Description({ project, align }) {
 
 function ProjectsCard({ index, project }) {
   return index % 2 ? (
-    <Flex justifyContent={"flex-end"} gap="40px" w="full">
+    <Flex justifyContent={"flex-end"} gap="85px" w="full">
       <Description project={project} align="right" />
       <Img project={project} />{" "}
     </Flex>
   ) : (
-    <Flex justifyContent={"flex-start"} gap="40px" w="full">
+    <Flex justifyContent={"flex-start"} gap="85px" w="full">
       <Img project={project} />
 
       <Description project={project} align="left" />

@@ -42,6 +42,7 @@ const PageNav = () => {
       w="50px"
       h="300px"
       lineHeight={"3em"} //This is needed so that the dividers stay more or less in the middle of the letters. Without it they start at the top of the letter.
+      zIndex={1}
     >
       <NavButton to="home" />
       <Spacer />

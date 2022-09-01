@@ -29,6 +29,10 @@ Bells and whistles:
 
 1. Change lorem ✅
 2. Add animated background ✅
-3. Responsive styling
-4. Videos instead of pictures
-5. Add CV download button
+3. Add CV download button ✅
+4. Responsive styling
+5. Videos instead of pictures
+6. Customize the animation
+7. Remove harsh lines in the gradient/get more pink in
+8. Different typeface
+9. Link local pictures, not hosted ones.
