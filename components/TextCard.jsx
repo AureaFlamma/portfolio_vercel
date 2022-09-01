@@ -5,7 +5,13 @@ import React from "react";
 
 function TextCard({ title, subtitle, paragraph, id }) {
   return (
-    <Flex h="calc(100vh - 80px)" direction="column" id={id} width="55%">
+    <Flex
+      h="calc(100vh - 110px)"
+      direction="column"
+      id={id}
+      width="55%"
+      minWidth={"900px"}
+    >
       <Text fontSize="120" fontWeight="700" lineHeight={"1"}>
         {title}
       </Text>

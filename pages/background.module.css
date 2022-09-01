@@ -1,0 +1,20 @@
+.gradient {
+  background: linear-gradient(130deg,#000814,#0b165e,#ff0e56,#ffe70e);
+  background-size: 180% 180%;
+  background-attachment: fixed;
+  animation: gradient-animation 12s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Created with https://animated-gradient-background-generator.netlify.app/ */

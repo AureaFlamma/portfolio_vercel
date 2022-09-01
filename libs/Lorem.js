@@ -2,9 +2,9 @@ const Lorem = {
   name: "Philip Kaminski",
   role: `Full Stack Developer`,
   personal_profile:
-    "My name's Philip. I'm a buddying web developer and a recent graduate of School Of Code. Artistic by nature, I tend to gravitate towards the visual aspects of the front end. However, I also find backend fascinating, in line with the interest in data and statistics which I took away from my Psychology BSc degree.",
+    "Hey, my name's Philip. I'm a full stack software developer passionate about all aspects of software development with a particular inclination towards creating functional and beautiful frontend applications.",
   about:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "My name's Philip. I'm a full stack software developer. Artistic by nature, I have a passion for creating stunning and accesible designs. As a keen problem-solver I love solving problems, whether on the front- or the backend. Backend and data are another passion of mine, in line with the interest in statistics I took away from my degree in Psychology. I have just finished School of Code bootcamp where I spent 16 weeks pair-programming in agile teams and delivering amazing software! I am always looking for exciting projects to contribute to so make sure to check out my github and send me a message (links on the right)!",
 };
 
 export default Lorem;

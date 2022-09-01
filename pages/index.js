@@ -5,16 +5,17 @@ import { Flex, Spacer } from "@chakra-ui/react";
 import Lorem from "../libs/Lorem";
 import SocialsNav from "../components/SocialsNav";
 import PageNav from "../components/PageNav";
+import styles from "./background.module.css";
 export default function Index() {
   return (
     <div>
       <Flex
+        className={styles.gradient}
         direction="column"
-        bg="yellow"
         py="110px"
         px="110px"
-        bgGradient="linear(130deg, #0B315E 0%, #FF0E56 74.31%, #FFE70E 103.68%)"
-        backgroundAttachment={"fixed"}
+        // bgGradient="linear(130deg, #0B315E 0%, #FF0E56 74.31%, #FFE70E 103.68%)"
+        // backgroundAttachment={"fixed"}
         color="white"
         gap="110px"
       >

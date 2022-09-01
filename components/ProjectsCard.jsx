@@ -3,7 +3,7 @@ import { Flex, Spacer, Text, Image, Link } from "@chakra-ui/react";
 
 function Img({ project }) {
   return (
-    <Flex width="45%" bg="pink">
+    <Flex width="45%">
       <Link href={project.link} isExternal>
         <Image
           src={project.img_src}
@@ -33,15 +33,15 @@ function Description({ project, align }) {
 
 function ProjectsCard({ index, project }) {
   return index % 2 ? (
+    <Flex justifyContent={"flex-end"} gap="40px" w="full">
+      <Description project={project} align="right" />
+      <Img project={project} />{" "}
+    </Flex>
+  ) : (
     <Flex justifyContent={"flex-start"} gap="40px" w="full">
       <Img project={project} />
 
       <Description project={project} align="left" />
-    </Flex>
-  ) : (
-    <Flex justifyContent={"flex-end"} gap="40px" w="full">
-      <Description project={project} align="right" />
-      <Img project={project} />{" "}
     </Flex>
   );
 }

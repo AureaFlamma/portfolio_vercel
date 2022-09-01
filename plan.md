@@ -24,3 +24,11 @@ Bells and whistles:
 7. Reformat with CSS variables. (including getting Socal Nav width in a variable)
 8. Fix wrapping of titles
 9. Projects: github link + deploy link
+
+---
+
+1. Change lorem ✅
+2. Add animated background ✅
+3. Responsive styling
+4. Videos instead of pictures
+5. Add CV download button
