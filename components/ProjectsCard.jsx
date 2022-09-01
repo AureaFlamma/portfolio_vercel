@@ -11,7 +11,7 @@ function Img({ project }) {
           width="full"
           fit="cover"
           fallbackSrc="https://via.placeholder.com/1920x1080.png"
-          _hover={{ boxShadow: "0 0 25px #FFBC1D" }}
+          _hover={{ boxShadow: "0 0 50px 10px #FF9C2880" }}
         />
       </Link>
     </Flex>

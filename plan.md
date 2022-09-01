@@ -4,12 +4,12 @@
    -page nav ✅
    -text ✅
 2. Resize text ✅
-3. Resize projects (project height?):
+3. Resize projects (project height?) ✅
 4. Refactor the social nav menu ✅
 5. Test mailto:
 6. Fix offset of scroll for Home ✅
-7. Width of ProjectCards
-8. Change fontweight of subtitles.
+7. Width of ProjectCards✅
+8. Change fontweight of subtitles.✅
 
 ---
 
