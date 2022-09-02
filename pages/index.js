@@ -14,7 +14,7 @@ export default function Index() {
       py={{ base: "40px", lg: "110px" }}
       px={{ base: "20px", lg: "110px" }}
       color="white"
-      gap="110px"
+      gap={{ base: "50px", lg: "110px" }}
     >
       {/* <PageNav /> */}
       <TextCard

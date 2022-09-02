@@ -1,9 +1,11 @@
 import { Flex, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
-import ProjectsCard from "./ProjectsCard";
+import { ProjectsCardDesktop, ProjectsCardMobile } from "./ProjectsCard";
 import ProjectsData from "../libs/ProjectsData";
+import { useMediaQuery } from "@chakra-ui/react";
 
 function Projects({ id }) {
+  const [isMobile] = useMediaQuery("(max-width: 960px)");
   return (
     <Flex direction="column" id={id}>
       <Text
@@ -13,10 +15,14 @@ function Projects({ id }) {
       >
         My projects
       </Text>
-      <Flex mt={{ base: "30px", lg: "80px" }} direction="column" gap="80px">
-        {ProjectsData.map((project, i) => (
-          <ProjectsCard project={project} key={i} index={i} />
-        ))}
+      <Flex mt={{ base: "30px", lg: "80px" }} direction="column" gap="110px">
+        {ProjectsData.map((project, i) =>
+          isMobile ? (
+            <ProjectsCardMobile project={project} key={i} index={i} />
+          ) : (
+            <ProjectsCardDesktop project={project} key={i} index={i} />
+          )
+        )}
       </Flex>
     </Flex>
   );

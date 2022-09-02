@@ -11,6 +11,7 @@ function TextCard({ title, subtitle, paragraph, id }) {
       id={id}
       width={{ base: "full", lg: "55%" }}
       minWidth={{ base: 0, lg: "900px" }}
+      justify={{ base: "center", lg: "start" }}
     >
       <Text
         fontSize={{ base: "40", lg: "120" }}
