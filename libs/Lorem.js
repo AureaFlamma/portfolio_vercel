@@ -2,9 +2,9 @@ const Lorem = {
   name: "Philip Kaminski",
   role: `Full Stack Developer`,
   personal_profile:
-    "Hey, my name's Philip. I'm a full stack software developer passionate about all aspects of software development with a particular inclination towards creating functional and beautiful frontend applications.",
+    "Hey, my name's Philip. I'm a full stack software developer and recent Psychology BSc graduate who believes there are more ways than one to help those around us. I combine a passion for creating beautiful, functional, innovative and accessible designs with a love for data, problem-solving and scientific approach. Currently looking for work",
   about:
-    "My name's Philip. I'm a full stack software developer. Artistic by nature, I have a passion for creating stunning and accesible designs. As a keen problem-solver I love solving problems, whether on the front- or the backend. Backend and data are another passion of mine, in line with the interest in statistics I took away from my degree in Psychology. I have just finished School of Code bootcamp where I spent 16 weeks pair-programming in agile teams and delivering amazing software! I am always looking for exciting projects to contribute to so make sure to check out my github and send me a message (links on the right)!",
+    "Hey, my name is Philip. I’m a junior full stack developer. I love creating stunning designs and neat functionality on the frontend with data and the backend being my very close second favourite! I work best in Agile teams and am familiar with GitHub Flow, version control and code reviews. My stack includes React.js, Next.js, Express.js, SQL, CSS, Tailwind, Chakra UI and much more! I’m always on the lookout for new challenging projects to contribute to, so make sure to contact me if you’d like to collaborate!",
 };
 
 export default Lorem;
