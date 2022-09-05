@@ -4,9 +4,13 @@ import Projects from "../components/Projects";
 import { Flex, Spacer } from "@chakra-ui/react";
 import Lorem from "../libs/Lorem";
 import SocialsNav from "../components/SocialsNav";
-import PageNav from "../components/PageNav";
+import { PageNavDesktop, PageNavMobile } from "../components/PageNav";
 import styles from "./background.module.css";
+
+import { useMediaQuery } from "@chakra-ui/react";
+
 export default function Index() {
+  const [isMobile] = useMediaQuery("(max-width: 960px)");
   return (
     <Flex
       className={styles.gradient}
@@ -16,7 +20,7 @@ export default function Index() {
       color="white"
       gap={{ base: "50px", lg: "110px" }}
     >
-      {/* <PageNav /> */}
+      {isMobile ? <PageNavMobile /> : <PageNavDesktop />}
       <TextCard
         title={Lorem.name}
         subtitle={Lorem.role}
@@ -24,7 +28,7 @@ export default function Index() {
         id="home"
       />
 
-      <Projects id="projects" />
+      <Projects id="projects" isMobile={isMobile} />
 
       <TextCard subtitle={`About`} paragraph={Lorem.about} id="about" />
       {/* <SocialsNav /> */}

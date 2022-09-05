@@ -2,10 +2,8 @@ import { Flex, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
 import { ProjectsCardDesktop, ProjectsCardMobile } from "./ProjectsCard";
 import ProjectsData from "../libs/ProjectsData";
-import { useMediaQuery } from "@chakra-ui/react";
 
-function Projects({ id }) {
-  const [isMobile] = useMediaQuery("(max-width: 960px)");
+function Projects({ id, isMobile }) {
   return (
     <Flex direction="column" id={id}>
       <Text
