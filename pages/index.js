@@ -31,7 +31,7 @@ export default function Index() {
       <Projects id="projects" isMobile={isMobile} />
 
       <TextCard subtitle={`About`} paragraph={Lorem.about} id="about" />
-      {/* <SocialsNav /> */}
+      <SocialsNav />
     </Flex>
   );
 }
