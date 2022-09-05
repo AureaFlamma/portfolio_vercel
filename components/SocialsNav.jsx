@@ -12,7 +12,7 @@ const SocialIcon = ({ href, icon }) => {
     <Link href={href} isExternal download>
       <Icon
         as={icon}
-        color="whiteAlpha.800"
+        color={{ base: "#0b165e", lg: "whiteAlpha.800" }}
         _hover={{
           color: "#0b165e",
         }}
@@ -26,10 +26,13 @@ const SocialIcon = ({ href, icon }) => {
 const SocialsNav3 = () => {
   return (
     <Flex
-      direction={"column"}
+      direction={{ base: "row", lg: "column" }}
       position="fixed"
-      top="110px"
-      right="30px"
+      top={{ base: "0px", lg: "110px" }}
+      right={{ base: "0", lg: "30px" }}
+      w={{ base: "full", lg: "auto" }}
+      justify="center"
+      bg={{ base: "whiteAlpha.800", lg: "none" }}
       gap="5"
     >
       <SocialIcon href="https://github.com/AureaFlamma" icon={FaGithub} />

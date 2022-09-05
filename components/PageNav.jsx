@@ -14,13 +14,13 @@ const NavButton = ({ to }) => {
   return (
     <LinkScroll to={to} spy={true} smooth={true} offset={-111} duration={500}>
       <Button
-        transform="rotate(270deg)"
+        transform={{ base: "none", lg: "rotate(270deg)" }}
         h="50px"
         bg="null"
+        color={{ base: "#0b165e", lg: "whiteAlpha.800" }}
         _hover={{ color: "#FFBC1D" }}
         _focus={{ color: "#FFBC1D" }}
         _active={{}} //This is only to override the default chakra _active styling for buttons
-        color="whiteAlpha.800"
         cursor="pointer"
       >
         <Text fontSize={"2xl"} textTransform="capitalize">
@@ -31,7 +31,7 @@ const NavButton = ({ to }) => {
   );
 };
 
-const PageNav = () => {
+const PageNavDesktop = () => {
   return (
     <Flex
       direction="column"
@@ -57,4 +57,43 @@ const PageNav = () => {
   );
 };
 
-export default PageNav;
+const PageNavMobile = () => {
+  return (
+    <Flex
+      direction="row"
+      position="fixed"
+      bottom="0"
+      left="0"
+      align="center"
+      w="full"
+      h="50px"
+      lineHeight={"3em"} //This is needed so that the dividers stay more or less in the middle of the letters. Without it they start at the top of the letter.
+      zIndex={1}
+      bg="whiteAlpha.800"
+    >
+      <Spacer />
+      <NavButton to="home" />
+      <Spacer />
+      <Divider
+        orientation="vertical"
+        h="60%"
+        border="1px"
+        borderColor="#0b165e"
+      />
+      <Spacer />
+      <NavButton to="projects" />
+      <Spacer />
+      <Divider
+        orientation="vertical"
+        h="60%"
+        border="1px"
+        borderColor="#0b165e"
+      />
+      <Spacer />
+      <NavButton to="about" />
+      <Spacer />
+    </Flex>
+  );
+};
+
+export { PageNavDesktop, PageNavMobile };

@@ -10,7 +10,7 @@ import {
 
 function Img({ project }) {
   return (
-    <Flex width="45%">
+    <Flex width={{ base: "full", lg: "45%" }}>
       <Link href={project.link} isExternal>
         <Image
           src={project.img_src}
@@ -20,9 +20,12 @@ function Img({ project }) {
           opacity={0.8}
           fallbackSrc="https://via.placeholder.com/1920x1080.png"
           _hover={{
-            transform: "scale(1.2)",
-            transition: "transform .2s",
-            opacity: "1",
+            base: "none",
+            lg: {
+              transform: "scale(1.2)",
+              transition: "transform .2s",
+              opacity: "1",
+            },
           }}
         />
       </Link>
@@ -32,18 +35,25 @@ function Img({ project }) {
 
 function Description({ project, align }) {
   return (
-    <Flex direction="column" w="40%">
-      <Text fontSize={"50"} align={align}>
+    <Flex direction="column" w={{ base: "full", lg: "40%" }}>
+      <Text
+        fontSize={{ base: "24", lg: "50" }}
+        align={{ base: "center", lg: [align] }}
+      >
         {project.name}
       </Text>
-      <Text fontSize={"24"} align={align} mt="10px">
+      <Text
+        fontSize={{ base: "18", lg: "24" }}
+        align={{ base: "justify", lg: [align] }}
+        mt="10px"
+      >
         {project.description}
       </Text>
     </Flex>
   );
 }
 
-function ProjectsCard({ index, project }) {
+function ProjectsCardDesktop({ index, project }) {
   return index % 2 ? (
     <Flex justifyContent={"flex-end"} gap="85px" w="full">
       <Description project={project} align="right" />
@@ -58,4 +68,13 @@ function ProjectsCard({ index, project }) {
   );
 }
 
-export default ProjectsCard;
+function ProjectsCardMobile({ index, project }) {
+  return (
+    <Flex gap="20px" w="full" direction="column">
+      <Img project={project} />
+      <Description project={project} align="right" />
+    </Flex>
+  );
+}
+
+export { ProjectsCardDesktop, ProjectsCardMobile };
