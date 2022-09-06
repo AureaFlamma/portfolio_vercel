@@ -15,15 +15,15 @@ const NavButton = ({ to }) => {
     <LinkScroll to={to} spy={true} smooth={true} offset={-111} duration={500}>
       <Button
         transform={{ base: "none", lg: "rotate(270deg)" }}
-        h="50px"
-        bg="null"
+        h={{ base: "30px", lg: "50px" }}
+        bg="red"
         color={{ base: "#0b165e", lg: "whiteAlpha.800" }}
         _hover={{ color: "#FFBC1D" }}
         _focus={{ color: "#FFBC1D" }}
         _active={{}} //This is only to override the default chakra _active styling for buttons
         cursor="pointer"
       >
-        <Text fontSize={"2xl"} textTransform="capitalize">
+        <Text fontSize={{ base: "m", lg: "2xl" }} textTransform="capitalize">
           {to}
         </Text>
       </Button>
@@ -96,4 +96,4 @@ const PageNavMobile = () => {
   );
 };
 
-export { PageNavDesktop, PageNavMobile };
+export { PageNavDesktop, NavButton, PageNavMobile };

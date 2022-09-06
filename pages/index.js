@@ -6,7 +6,7 @@ import Lorem from "../libs/Lorem";
 import SocialsNav from "../components/SocialsNav";
 import { PageNavDesktop, PageNavMobile } from "../components/PageNav";
 import styles from "./background.module.css";
-import MobileMenu from "../components/MobileMenu";
+import { MobileMenu } from "../components/MobileMenu";
 
 import { useMediaQuery } from "@chakra-ui/react";
 
