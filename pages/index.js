@@ -6,6 +6,7 @@ import Lorem from "../libs/Lorem";
 import SocialsNav from "../components/SocialsNav";
 import { PageNavDesktop, PageNavMobile } from "../components/PageNav";
 import styles from "./background.module.css";
+import MobileMenu from "../components/MobileMenu";
 
 import { useMediaQuery } from "@chakra-ui/react";
 
@@ -20,7 +21,7 @@ export default function Index() {
       color="white"
       gap={{ base: "50px", lg: "110px" }}
     >
-      {isMobile ? <PageNavMobile /> : <PageNavDesktop />}
+      {isMobile ? <MobileMenu /> : <PageNavDesktop />}
       <TextCard
         title={Lorem.name}
         subtitle={Lorem.role}
@@ -31,7 +32,7 @@ export default function Index() {
       <Projects id="projects" isMobile={isMobile} />
 
       <TextCard subtitle={`About`} paragraph={Lorem.about} id="about" />
-      <SocialsNav />
+      {!isMobile && <SocialsNav />}
     </Flex>
   );
 }
