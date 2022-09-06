@@ -7,11 +7,13 @@ import SocialsNav from "../components/SocialsNav";
 import { PageNavDesktop, PageNavMobile } from "../components/PageNav";
 import styles from "./background.module.css";
 import { MobileMenu } from "../components/MobileMenu";
+import { useState } from "react";
 
 import { useMediaQuery } from "@chakra-ui/react";
 
 export default function Index() {
   const [isMobile] = useMediaQuery("(max-width: 960px)");
+  const [isBlurred, setIsBlurred] = useState(false);
   return (
     <Flex
       className={styles.gradient}
@@ -20,8 +22,14 @@ export default function Index() {
       px={{ base: "20px", lg: "110px" }}
       color="white"
       gap={{ base: "50px", lg: "110px" }}
+      filter="auto"
+      blur={isBlurred ? "5px" : "0"}
     >
-      {isMobile ? <MobileMenu /> : <PageNavDesktop />}
+      {isMobile ? (
+        <MobileMenu setIsBlurred={setIsBlurred} />
+      ) : (
+        <PageNavDesktop />
+      )}
       <TextCard
         title={Lorem.name}
         subtitle={Lorem.role}

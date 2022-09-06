@@ -20,10 +20,11 @@ import { NavButton } from "./PageNav";
 import { FaGithub, FaEnvelope } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { IoDocumentText } from "react-icons/io5";
+import { useEffect } from "react";
 
 import { FiMenu } from "react-icons/fi";
 
-const MobileMenu = () => {
+const MobileMenu = ({ setIsBlurred }) => {
   return (
     <Flex
       direction="row"
@@ -65,13 +66,13 @@ const MobileMenu = () => {
         borderColor="#0b165e"
       />
       <Spacer />
-      <SocialsMenu />
+      <SocialsMenu setIsBlurred={setIsBlurred} />
       <Spacer />
     </Flex>
   );
 };
 
-const SocialsMenu = () => {
+const SocialsMenu = ({ setIsBlurred }) => {
   return (
     <Menu>
       <MenuButton
