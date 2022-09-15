@@ -29,6 +29,16 @@ const ProjectsData = [
     link: "https://github.com/AureaFlamma/Squatify-App",
     alt: "Squatify screenshot",
   },
+  {
+    id: 4,
+
+    name: "LinkClipper",
+    description:
+      "An NPM package to help developers easily shorten any URLs that they want to display to users in their apps. ",
+    img_src: "example.png",
+    link: "https://github.com/DHawkesford/LinkClipper",
+    alt: "LinkClipper Example screenshot",
+  },
 ];
 
 export default ProjectsData;
